@@ -1,0 +1,17 @@
+def calculate_mass(height, weight):
+    mass = weight / (height ** 2)
+    return mass
+
+def process_mass(mass):
+    if mass < 18.5:
+        print("Недостаточный вес")
+    elif mass >= 18.5 and mass <= 25:
+        print("ИМТ в норме")
+    else:
+        print("Избыточный вес")
+
+
+height = float(input("Введите рост: "))
+weight = float(input("Введите вес: "))
+mass = calculate_mass(height, weight)
+process_mass(mass)
